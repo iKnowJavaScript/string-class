@@ -47,4 +47,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.words()).toHaveLength(string.length);
     });
   });
+  describe("Test cases for wordCount()", function() {
+    it("Should return number of words in the string", function() {
+      let string = "capitalise";
+      expect(string.wordCount()).toHaveLength(10);
+    });
+  });
 });
