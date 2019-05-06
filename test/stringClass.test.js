@@ -24,4 +24,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.toLower()).toMatch("all in lowercase");
     });
   });
+  describe("Test cases for ucFirst()", function() {
+    it("Should return the string Capitalizing first letter", function() {
+      let string = "capitalise";
+      expect(string.ucFirst()).toMatch("Capitalise");
+    });
+  });
 });
