@@ -1,5 +1,6 @@
 //Type definitions for Jest
 //npm install @types/jest
+const { String } = require("../src/stringClass");
 
 describe("Testing the Extended methods added to String Prototype", function() {
   describe("Testing hasVowels()", function() {
@@ -88,7 +89,7 @@ describe("Testing the Extended methods added to String Prototype", function() {
       let string = "3";
       expect(string.isDigit()).toBeTruthy();
     });
-  
+
     it("Should return false if the string is not a digit(one number)", function() {
       let string = "34";
       expect(string.isDigit()).toBeFalsy();
