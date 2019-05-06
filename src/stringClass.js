@@ -1,7 +1,11 @@
-String.prototype = {
-  constructor: String,
-  hasVowels: function() {},
-  toUpper: function() {}
+String.prototype.hasVowels = function() {
+  let vowelsPattern = /[aeiou]/gi;
+
+  return vowelsPattern.test(this);
 };
 
-module.exports = { String };
+
+
+let str = "HhhhE";
+console.log(str.hasVowels());
+//module.exports = { String };
