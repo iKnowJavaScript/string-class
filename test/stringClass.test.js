@@ -30,4 +30,14 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.ucFirst()).toMatch("Capitalise");
     });
   });
+  describe("Test cases for isQuestion()", function() {
+    it("Should return true if the string is a valid question sectence", function() {
+      let string = "How are you doing?";
+      expect(string.isQuestion()).toBeTruthy();
+    });
+    it("Should return false if the string is not a valid question sectence", function() {
+      let string = "How are you doing";
+      expect(string.isQuestion()).toBeFalsy();
+    });
+  });
 });
