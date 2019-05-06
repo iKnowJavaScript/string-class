@@ -77,4 +77,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.alternatingCase()).toMatch("oNoMaToPoEiA");
     });
   });
+  describe("Test cases for numberWords()", function() {
+    it("Should returns the numbers in words", function() {
+      let string = "325";
+      expect(string.numberWords()).toMatch("three two five");
+    });
+  });
 });
