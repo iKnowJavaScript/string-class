@@ -53,4 +53,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.wordCount()).toHaveLength(10);
     });
   });
+  describe("Test cases for toCurrency()", function() {
+    it("Should returns a currency representation of the string", function() {
+      let string = "11111.11";
+      expect(string.toCurrency()).toMatch("11,111.11");
+    });
+  });
 });
