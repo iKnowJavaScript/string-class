@@ -1,0 +1,28 @@
+{
+  "name": "String_Class",
+  "version": "1.0.0",
+  "description": "Extending the String class in Javascript using Prototype Oriented Programming.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.12",
+    "jest": "^24.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iKnowJavaScript/String_Class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iKnowJavaScript/String_Class/issues"
+  },
+  "homepage": "https://github.com/iKnowJavaScript/String_Class#readme"
+}
