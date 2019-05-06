@@ -18,4 +18,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.toUpper()).toMatch("ALL IN CAPITAL");
     });
   });
+  describe("Test cases for toLower()", function() {
+    it("Should return the string in lowercase form", function() {
+      let string = "ALL IN LOWERCASE";
+      expect(string.toLower()).toMatch("all in lowercase");
+    });
+  });
 });
