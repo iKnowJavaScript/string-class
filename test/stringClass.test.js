@@ -40,4 +40,11 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.isQuestion()).toBeFalsy();
     });
   });
+  describe("Test cases for words()", function() {
+    it("Should return array of words in the string", function() {
+      let string = "capitalise";
+      expect(string.words()).toContainEqual("Capitalise");
+      expect(string.words()).toHaveLength(string.length);
+    });
+  });
 });
