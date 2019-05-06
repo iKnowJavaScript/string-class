@@ -83,4 +83,15 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.numberWords()).toMatch("three two five");
     });
   });
+  describe("Test cases for isDigit()", function() {
+    it("Should return true if the string is a digit(one number)", function() {
+      let string = "3";
+      expect(string.isDigit()).toBeTruthy();
+    });
+  
+    it("Should return false if the string is not a digit(one number)", function() {
+      let string = "34";
+      expect(string.isDigit()).toBeFalsy();
+    });
+  });
 });
