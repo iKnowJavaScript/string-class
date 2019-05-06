@@ -71,4 +71,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.inverseCase()).toMatch("mR. bEN");
     });
   });
+  describe("Test cases for alternatingCase()", function() {
+    it("Should returns the letters in alternating cases", function() {
+      let string = "Onomatopoeia";
+      expect(string.alternatingCase()).toMatch("oNoMaToPoEiA");
+    });
+  });
 });
