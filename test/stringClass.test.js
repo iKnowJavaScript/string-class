@@ -65,4 +65,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.fromCurrency()).toMatch("11111.11");
     });
   });
+  describe("Test cases for inverseCase()", function() {
+    it("Should returns the string with each word in inverse case", function() {
+      let string = "Mr. Ben";
+      expect(string.inverseCase()).toMatch("mR. bEN");
+    });
+  });
 });
