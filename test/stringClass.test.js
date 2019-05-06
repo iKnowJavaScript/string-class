@@ -59,4 +59,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.toCurrency()).toMatch("11,111.11");
     });
   });
+  describe("Test cases for fromCurrency()", function() {
+    it("Should returns a currency representation of the string", function() {
+      let string = "11111.11";
+      expect(string.fromCurrency()).toMatch("11111.11");
+    });
+  });
 });
