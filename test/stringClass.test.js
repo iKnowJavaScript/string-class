@@ -12,4 +12,10 @@ describe("Testing the Extended methods added to String Prototype", function() {
       expect(string.hasVowels()).toBeFalsy();
     });
   });
+  describe("Test cases for toUpper()", function() {
+    it("Should return the string in capital letter", function() {
+      let string = "All in Capital";
+      expect(string.toUpper()).toMatch("ALL IN CAPITAL");
+    });
+  });
 });
