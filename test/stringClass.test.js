@@ -17,6 +17,7 @@ describe("Testing the Extended methods added to String Prototype", function() {
     it("Should return the string in capital letter", function() {
       let string = "All in Capital";
       expect(string.toUpper()).toMatch("ALL IN CAPITAL");
+      expect("Some_-case".toUpper()).toMatch("SOME_-CASE");
     });
   });
   describe("Test cases for toLower()", function() {
