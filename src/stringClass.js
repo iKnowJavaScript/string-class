@@ -49,9 +49,14 @@ String.prototype.wordCount = function() {
   return this.words().length;
 };
 
-String.prototype.toCurrency = function() {};
+String.prototype.toCurrency = function() {
+  
+};
 
-String.prototype.fromCurrency = function() {};
+String.prototype.fromCurrency = function() {
+  var commaRegExp = /,/g;
+  return this.replace(commaRegExp, '');
+};
 
 String.prototype.inverseCase = function() {
   var upperCaseRegExp = /^[A-Z]$/;
@@ -73,7 +78,32 @@ String.prototype.alternatingCase = function() {
     .join('');
 };
 
-String.prototype.numberWords = function() {};
+String.prototype.numberWords = function() {
+  var strings = this.split('');
+  var stringLength = strings.length;
+  var wordLetter = {
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six',
+    7: 'seven',
+    8: 'eight',
+    9: 'nine'
+  };
+  var letter = '';
+  for (let index = 0; index < stringLength; index++) {
+    var string = strings[index];
+    if (index === stringLength - 1) {
+      letter += wordLetter[string];
+    } else {
+      letter += wordLetter[string] + ' ';
+    }
+  }
+  return letter;
+};
 
 String.prototype.isDigit = function() {
   var isDigitRegExp = /^[0-9]$/;
@@ -81,4 +111,4 @@ String.prototype.isDigit = function() {
   return isDigitRegExp.test(this);
 };
 
-console.log('mR. Ben'.alternatingCase()); // mR. bEN
+console.log('11,111.11'.fromCurrency());
