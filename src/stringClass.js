@@ -6,22 +6,22 @@ String.prototype.hasVowels = function() {
 
 String.prototype.toUpper = function() {
   return this.split("")
-    .map(e => {
-      var index = e.charCodeAt(e);
-      return index > 96 && index < 123
-        ? (e = String.fromCharCode(index - 32))
-        : e;
+    .map(character => {
+      var characterCode = character.charCodeAt(character);
+      return characterCode > 96 && characterCode < 123
+        ? (character = String.fromCharCode(characterCode - 32))
+        : character;
     })
     .join("");
 };
 
 String.prototype.toLower = function() {
   return this.split("")
-    .map(e => {
-      var index = e.charCodeAt(e);
-      return index > 63 && index < 91
-        ? (e = String.fromCharCode(index + 32))
-        : e;
+    .map(character => {
+      var characterCode = character.charCodeAt(character);
+      return characterCode > 63 && characterCode < 91
+        ? (character = String.fromCharCode(characterCode + 32))
+        : character;
     })
     .join("");
 };
@@ -53,7 +53,11 @@ String.prototype.toCurrency = function() {};
 
 String.prototype.fromCurrency = function() {};
 
-String.prototype.inverseCase = function() {};
+String.prototype.inverseCase = function() {
+  var string = this.split.map(character => {
+    var characterCode = character.charCodeAt(character);
+  });
+};
 
 String.prototype.alternatingCase = function() {};
 
