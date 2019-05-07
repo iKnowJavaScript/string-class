@@ -38,3 +38,13 @@ String.prototype.isQuestion = function() {
   return questionReGex.test(question);
 };
 
+String.prototype.words = function() {
+  var string = this.trim();
+  var splitRegExp = /\s+/g;
+
+  return string.split(splitRegExp);
+};
+
+String.prototype.wordCount = function() {
+  return this.words.length;
+};
