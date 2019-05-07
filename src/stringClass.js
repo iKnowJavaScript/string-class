@@ -66,7 +66,11 @@ String.prototype.inverseCase = function() {
 };
 
 String.prototype.alternatingCase = function() {
- 
+  return this.split('')
+    .map((character, index) => {
+      return index % 2 === 0 ? character.toLower() : character.toUpper();
+    })
+    .join('');
 };
 
 String.prototype.numberWords = function() {};
