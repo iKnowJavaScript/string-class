@@ -7,7 +7,7 @@ String.prototype.hasVowels = function() {
 String.prototype.toUpper = function() {
   return this.split("")
     .map(e => {
-      let index = e.charCodeAt(e);
+      var index = e.charCodeAt(e);
       return index > 96 && index < 123
         ? (e = String.fromCharCode(index - 32))
         : e;
@@ -18,7 +18,7 @@ String.prototype.toUpper = function() {
 String.prototype.toLower = function() {
   return this.split("")
     .map(e => {
-      let index = e.charCodeAt(e);
+      var index = e.charCodeAt(e);
       return index > 63 && index < 91
         ? (e = String.fromCharCode(index + 32))
         : e;
@@ -27,6 +27,7 @@ String.prototype.toLower = function() {
 };
 
 String.prototype.ucFirst = function() {
-  let word = this.trim();
+  var word = this.trim();
   return word.charAt(0).toUpper() + word.slice(1);
-}
+};
+
