@@ -31,3 +31,10 @@ String.prototype.ucFirst = function() {
   return word.charAt(0).toUpper() + word.slice(1);
 };
 
+String.prototype.isQuestion = function() {
+  var question = this.trim();
+  var questionReGex = /^.{2,}\?$/;
+
+  return questionReGex.test(question);
+};
+
