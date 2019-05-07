@@ -30,6 +30,7 @@ describe("Testing the Extended methods added to String Prototype", function() {
     it("Should return the string Capitalizing first letter", function() {
       let string = "capitalise";
       expect(string.ucFirst()).toMatch("Capitalise");
+      expect(" capitalise".ucFirst()).toMatch("Capitalise");
     });
   });
   describe("Test cases for isQuestion()", function() {

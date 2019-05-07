@@ -25,3 +25,8 @@ String.prototype.toLower = function() {
     })
     .join("");
 };
+
+String.prototype.ucFirst = function() {
+  let word = this.trim();
+  return word.charAt(0).toUpper() + word.slice(1);
+}
