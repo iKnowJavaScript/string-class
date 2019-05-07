@@ -14,4 +14,14 @@ String.prototype.toUpper = function() {
     })
     .join("");
 };
-`
+
+String.prototype.toLower = function() {
+  return this.split("")
+    .map(e => {
+      let index = e.charCodeAt(e);
+      return index > 63 && index < 91
+        ? (e = String.fromCharCode(index + 32))
+        : e;
+    })
+    .join("");
+};
