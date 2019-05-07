@@ -5,25 +5,25 @@ String.prototype.hasVowels = function() {
 };
 
 String.prototype.toUpper = function() {
-  return this.split("")
+  return this.split('')
     .map(character => {
       var characterCode = character.charCodeAt(character);
       return characterCode > 96 && characterCode < 123
         ? (character = String.fromCharCode(characterCode - 32))
         : character;
     })
-    .join("");
+    .join('');
 };
 
 String.prototype.toLower = function() {
-  return this.split("")
+  return this.split('')
     .map(character => {
       var characterCode = character.charCodeAt(character);
       return characterCode > 63 && characterCode < 91
         ? (character = String.fromCharCode(characterCode + 32))
         : character;
     })
-    .join("");
+    .join('');
 };
 
 String.prototype.ucFirst = function() {
@@ -54,12 +54,20 @@ String.prototype.toCurrency = function() {};
 String.prototype.fromCurrency = function() {};
 
 String.prototype.inverseCase = function() {
-  var string = this.split.map(character => {
-    var characterCode = character.charCodeAt(character);
-  });
+  var upperCaseRegExp = /^[A-Z]$/;
+
+  return this.split('')
+    .map(character => {
+      return upperCaseRegExp.test(character)
+        ? character.toLower()
+        : character.toUpper();
+    })
+    .join('');
 };
 
-String.prototype.alternatingCase = function() {};
+String.prototype.alternatingCase = function() {
+ 
+};
 
 String.prototype.numberWords = function() {};
 
@@ -68,3 +76,5 @@ String.prototype.isDigit = function() {
 
   return isDigitRegExp.test(this);
 };
+
+console.log('mR. Ben'.alternatingCase()); // mR. bEN
