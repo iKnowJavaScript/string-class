@@ -1,5 +1,3 @@
-//Type definitions for Jest
-//npm install @types/jest
 var { String } = require('../src/stringClass');
 
 describe('Testing the Extended methods added to String Prototype', function() {
@@ -70,6 +68,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should returns a currency representation of the string', function() {
       var string = '11111.11';
       expect(string.toCurrency()).toMatch('11,111.11');
+      expect('1234567890'.toCurrency()).toMatch('1,234,567,890.00');
     });
   });
 

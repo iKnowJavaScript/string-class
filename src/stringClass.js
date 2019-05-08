@@ -63,7 +63,9 @@ String.prototype.toCurrency = function() {
     .reverse()
     .join('');
 
-  return interger + '.' + currencyArray[1];
+  return currencyArray[1]
+    ? interger + '.' + currencyArray[1]
+    : interger + '.' + '00';
 };
 
 String.prototype.fromCurrency = function() {
