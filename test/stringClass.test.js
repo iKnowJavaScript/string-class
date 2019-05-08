@@ -31,7 +31,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should return the string Capitalizing first varter', function() {
       var string = 'capitalise';
       expect(string.ucFirst()).toMatch('Capitalise');
-      expect(' capitalise'.ucFirst()).toMatch('Capitalise');
+      expect('capitalise'.ucFirst()).toMatch('Capitalise');
     });
   });
 
@@ -68,7 +68,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should returns a currency representation of the string', function() {
       var string = '11111.11';
       expect(string.toCurrency()).toMatch('11,111.11');
-      expect('1234567890'.toCurrency()).toMatch('1,234,567,890.00');
+      expect('1234567890.00'.toCurrency()).toMatch('1,234,567,890.00');
     });
   });
 

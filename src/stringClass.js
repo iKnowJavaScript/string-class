@@ -27,8 +27,11 @@ String.prototype.toLower = function() {
 };
 
 String.prototype.ucFirst = function() {
-  var word = this.trim();
-  return word.charAt(0).toUpper() + word.slice(1);
+  let firstLetterRegExp = /^[a-z]/;
+
+  return this.replace(firstLetterRegExp, function(match) {
+    return match.toUpper();
+  });
 };
 
 String.prototype.isQuestion = function() {
@@ -50,22 +53,9 @@ String.prototype.wordCount = function() {
 };
 
 String.prototype.toCurrency = function() {
-  var currencyArray = this.split('.');
-  var regex = /((?:\d{3}))(?=\.|$|)/g;
+  let reg = /\d(?=(\d{3}){1,}\.)/g;
 
-  var interger = currencyArray[0]
-    .split('')
-    .reverse()
-    .join('');
-  interger = interger
-    .replace(regex, '$1,')
-    .split('')
-    .reverse()
-    .join('');
-
-  return currencyArray[1]
-    ? interger + '.' + currencyArray[1]
-    : interger + '.' + '00';
+  return this.replace(reg, '$&,');
 };
 
 String.prototype.fromCurrency = function() {
@@ -125,3 +115,14 @@ String.prototype.isDigit = function() {
 
   return isDigitRegExp.test(this);
 };
+
+//console.log("gooo".replace(/([a-z])/g, "\U"))
+
+let go = 'GOooo'.replace(/[a-zA-Z]/g, function(character) {
+  var characterCode = character.charCodeAt(character);
+  return characterCode > 96 && characterCode < 123
+    ? (character = String.fromCharCode(characterCode - 32))
+    : character;
+});
+
+console.log(go);
