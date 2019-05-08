@@ -18,4 +18,10 @@ Extending the String class in Javascript using Prototype Oriented Programming.
 | String.prototype.alternatingCase | used to alternate the character case in a string with the first character as always lowercase | "Onomatopoeia".alternatingCase() returns "oNoMaToPoEiA" |
 | String.prototype.numberToWord    | used to convert numbers in a string to their equivalent in words                              | "325".numberToWord() returns "three two five"           |
 | String.prototype.fromCurrency    | used to convert currency strings to numbers equivalent                                                   | "11,111.11".fromCurrency() returns 11111.11             |
-| String.prototype.toCurrency      | used to convert Strings to currency equivalent                                                           | "1000".toCurrency() returns "1,000"                     |
+| String.prototype.toCurrency      | used to convert Strings to currency equivalent                                                           | "1000".toCurrency() returns "1,000"                     |  
+
+
+## Testing
+Jest was used to test every functionality of this Project.     
+
+Feel free to clone and `npm init` to get the feel of the app and `npm test` before adding more functionality if you wish.
