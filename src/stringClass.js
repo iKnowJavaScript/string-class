@@ -50,7 +50,20 @@ String.prototype.wordCount = function() {
 };
 
 String.prototype.toCurrency = function() {
-  
+  var currencyArray = this.split('.');
+  var regex = /((?:\d{3}))(?=\.|$|)/g;
+
+  var interger = currencyArray[0]
+    .split('')
+    .reverse()
+    .join('');
+  interger = interger
+    .replace(regex, '$1,')
+    .split('')
+    .reverse()
+    .join('');
+
+  return interger + '.' + currencyArray[1];
 };
 
 String.prototype.fromCurrency = function() {
@@ -110,5 +123,3 @@ String.prototype.isDigit = function() {
 
   return isDigitRegExp.test(this);
 };
-
-console.log('11,111.11'.fromCurrency());
