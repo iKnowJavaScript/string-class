@@ -16,7 +16,7 @@ String.prototype.toUpper = function() {
 };
 
 String.prototype.toLower = function() {
-  let upperCharRegex = /[A-Z]/g; // regular expression pattern that find all upperCase in a string
+  var upperCharRegex = /[A-Z]/g; // regular expression pattern that find all upperCase in a string
   /*
     replaces every upperCase Character with its lowerCase equivalent
     passing them as parameter to the upperAndLowerConverter function from helper.js
@@ -25,7 +25,7 @@ String.prototype.toLower = function() {
 };
 
 String.prototype.ucFirst = function() {
-  let firstLetterRegExp = /^[a-z]/; // regular expression pattern that finds the first lowerCase alphabet
+  var firstLetterRegExp = /^[a-z]/; // regular expression pattern that finds the first lowerCase alphabet
 
   return this.replace(firstLetterRegExp, function(match) {
     return match.toUpper(); // replaces the found character with uppercase equivalent
@@ -56,7 +56,7 @@ String.prototype.toCurrency = function() {
   (?=(\d{3}){1,}\. - a positive lookAhead for 3 digits in one or  more cases followed 
   by . that may appear one ore infinite cases and capturing the matches
   */
-  let reg = /\d(?=(\d{3}){1,}\.)/g;
+  var reg = /\d(?=(\d{3}){1,}\.)/g;
 
   return this.replace(reg, '$&,'); // replaces the match cases with its value and a comma
 };
@@ -110,7 +110,7 @@ String.prototype.numberWords = function() {
   }; // store the number and word equivalent into an objects
 
   var letter = '';
-  for (let index = 0; index < stringLength; index++) {
+  for (var index = 0; index < stringLength; index++) {
     var string = stringArray[index]; //each number from the array of numbers
     /*
     if its the last element in the array add the word equivalent of the number
