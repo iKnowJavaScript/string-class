@@ -31,7 +31,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should return the string Capitalizing first varter', function() {
       var string = 'capitalise';
       expect(string.ucFirst()).toMatch('Capitalise');
-      expect('capitalise'.ucFirst()).toMatch('Capitalise');
+      expect('capitalise first'.ucFirst()).toMatch('Capitalise first');
     });
   });
 
