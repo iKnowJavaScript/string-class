@@ -1,3 +1,5 @@
+const { upperAndLowerConverter } = require('../helper/helper');
+
 String.prototype.hasVowels = function() {
   var vowelsPattern = /[aeiou]/gi;
 
@@ -5,25 +7,15 @@ String.prototype.hasVowels = function() {
 };
 
 String.prototype.toUpper = function() {
-  return this.split('')
-    .map(character => {
-      var characterCode = character.charCodeAt(character);
-      return characterCode > 96 && characterCode < 123
-        ? (character = String.fromCharCode(characterCode - 32))
-        : character;
-    })
-    .join('');
+  let lowerCharRegex = /[a-z]/g;
+
+  return this.replace(lowerCharRegex, upperAndLowerConverter);
 };
 
 String.prototype.toLower = function() {
-  return this.split('')
-    .map(character => {
-      var characterCode = character.charCodeAt(character);
-      return characterCode > 63 && characterCode < 91
-        ? (character = String.fromCharCode(characterCode + 32))
-        : character;
-    })
-    .join('');
+  let upperCharRegex = /[A-Z]/g;
+
+  return this.replace(upperCharRegex, upperAndLowerConverter);
 };
 
 String.prototype.ucFirst = function() {
@@ -115,14 +107,3 @@ String.prototype.isDigit = function() {
 
   return isDigitRegExp.test(this);
 };
-
-//console.log("gooo".replace(/([a-z])/g, "\U"))
-
-let go = 'GOooo'.replace(/[a-zA-Z]/g, function(character) {
-  var characterCode = character.charCodeAt(character);
-  return characterCode > 96 && characterCode < 123
-    ? (character = String.fromCharCode(characterCode - 32))
-    : character;
-});
-
-console.log(go);
