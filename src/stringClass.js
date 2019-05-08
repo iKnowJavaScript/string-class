@@ -1,4 +1,4 @@
-const { upperAndLowerConverter } = require('../helper/helper');
+var { upperAndLowerConverter } = require('../helper/helper');
 
 String.prototype.hasVowels = function() {
   var vowelsPattern = /[aeiou]/gi; // regular expression to find any vowel in a string
@@ -7,7 +7,7 @@ String.prototype.hasVowels = function() {
 };
 
 String.prototype.toUpper = function() {
-  let lowerCharRegex = /[a-z]/g; // regular expression pattern that find all lowerCase in a string
+  var lowerCharRegex = /[a-z]/g; // regular expression pattern that find all lowerCase in a string
   /*
     replaces every lowerCase Character with its uppercase equivalent
     passing them as parameter to the upperAndLowerConverter function from helper.js
