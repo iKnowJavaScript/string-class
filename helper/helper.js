@@ -17,4 +17,4 @@ function alphabetConverter(character) {
   }
 }
 
-module.exports = { lphabetConverter };
+module.exports = { alphabetConverter };
