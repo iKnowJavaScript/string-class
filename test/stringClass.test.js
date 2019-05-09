@@ -5,10 +5,12 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should return true if the string contains vowels', function() {
       var string = 'Vowel is here';
       expect(string.hasVowels()).toBeTruthy();
+      expect('string'.hasVowels()).toBeTruthy();
     });
     it('Should return true if the string contains vowels', function() {
       var string = 'gypt';
       expect(string.hasVowels()).toBeFalsy();
+      expect('crypt'.hasVowels()).toBeFalsy();
     });
   });
 
@@ -24,6 +26,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
     it('Should return the string in lowercase form', function() {
       var string = 'ALL IN LOWERCASE';
       expect(string.toLower()).toMatch('all in lowercase');
+      expect('SOME_-CASE'.toLower()).toMatch('some_-case');
     });
   });
 
