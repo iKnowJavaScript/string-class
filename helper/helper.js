@@ -1,4 +1,4 @@
-function upperAndLowerConverter(character) {
+function alphabetConverter(character) {
   var characterUnicode = character.charCodeAt(0); //get the UNICODE equivalent of Character
   /*
     character Unicode of A-Z is 65-90
@@ -17,4 +17,4 @@ function upperAndLowerConverter(character) {
   }
 }
 
-module.exports = { upperAndLowerConverter };
+module.exports = { alphabetConverter };
