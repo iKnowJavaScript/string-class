@@ -1,4 +1,4 @@
-# String_Class
+# String-Class
 Extending the String class in Javascript using Prototype Oriented Programming.
 
 
