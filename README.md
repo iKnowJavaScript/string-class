@@ -1,4 +1,7 @@
 # String-Class
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6d753dd35b942038d29e94ef3a0073e)](https://app.codacy.com/app/iKnowJavaScript/String-Class?utm_source=github.com&utm_medium=referral&utm_content=iKnowJavaScript/String-Class&utm_campaign=Badge_Grade_Dashboard)
+
 Extending the String class in Javascript using Prototype Oriented Programming.
 
 
