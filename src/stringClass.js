@@ -1,4 +1,4 @@
-var { alphabetConverter } = require('../helper/helper');
+var { convertToUppercase, convertToLowercase } = require('../helper/helper');
 
 String.prototype.hasVowels = function() {
   var vowelsPattern = /[aeiou]/gi; // regular expression to find any vowel in a string
@@ -12,7 +12,7 @@ String.prototype.toUpper = function() {
     replaces every lowerCase Character with its uppercase equivalent
     passing them as parameter to the upperAndLowerConverter function from helper.js
   */
-  return this.replace(lowerCharRegex, alphabetConverter);
+  return this.replace(lowerCharRegex, convertToUppercase);
 };
 
 String.prototype.toLower = function() {
@@ -21,7 +21,7 @@ String.prototype.toLower = function() {
     replaces every upperCase Character with its lowerCase equivalent
     passing them as parameter to the upperAndLowerConverter function from helper.js
   */
-  return this.replace(upperCharRegex, alphabetConverter);
+  return this.replace(upperCharRegex, convertToLowercase);
 };
 
 String.prototype.ucFirst = function() {
