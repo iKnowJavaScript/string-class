@@ -1,11 +1,4 @@
 # String-Class
-<<<<<<< HEAD
-=======
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6d753dd35b942038d29e94ef3a0073e)](https://app.codacy.com/app/iKnowJavaScript/String-Class?utm_source=github.com&utm_medium=referral&utm_content=iKnowJavaScript/String-Class&utm_campaign=Badge_Grade_Dashboard)
-
-Extending the String class in Javascript using Prototype Oriented Programming.
->>>>>>> cb47e40aefe4035e09f0afa817e70ec61b89afc9
 
 Extending the String class in Javascript using Prototype Oriented Programming.
 
@@ -33,4 +26,4 @@ Jest was used to test every functionality of this Project.
 
 Feel free to clone and `npm init` to get the feel of the app and `npm test` before adding more functionality if you wish.
 
-[![CircleCI](https://circleci.com/gh/iKnowJavaScript/string-class.svg?style=svg)](https://circleci.com/gh/iKnowJavaScript/string-class)
+[![CircleCI](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master.svg?style=svg)](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master)
