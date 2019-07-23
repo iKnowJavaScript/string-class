@@ -84,7 +84,7 @@ describe('Testing the Extended methods added to String Prototype', function() {
 
   describe('Test cases for inverseCase()', function() {
     it('Should returns the string with each word in inverse case', function() {
-      var string = 'Mr. Ben';
+      var string = 'Mr. Be';
       expect(string.inverseCase()).toMatch('mR. bEN');
     });
   });
