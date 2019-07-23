@@ -1,5 +1,7 @@
 # String-Class
 
+[![CircleCI](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master.svg?style=svg)](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master)
+
 Extending the String class in Javascript using Prototype Oriented Programming.
 
 ## methods added:
@@ -26,4 +28,3 @@ Jest was used to test every functionality of this Project.
 
 Feel free to clone and `npm init` to get the feel of the app and `npm test` before adding more functionality if you wish.
 
-[![CircleCI](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master.svg?style=svg)](https://circleci.com/gh/iKnowJavaScript/string-class/tree/master)
